@@ -1,18 +1,22 @@
 package p2_2_1;
 
 public class Brick extends Shape {
-    private double side;
+    private double a, b, c;
 
-    public Brick(double side) {
-        this.side = side;
+    public Brick(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
-    public double getSide() {
-        return side;
+    public void printDimensions() {
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
     }
 
     @Override
     public double getVolume() {
-        return side * side * side;
+        return a * b * c;
     }
 }
