@@ -7,6 +7,7 @@ public class Brick extends Shape {
         this.a = a;
         this.b = b;
         this.c = c;
+        setVolume(a * b * c);
     }
 
     public void printDimensions() {
@@ -15,8 +16,8 @@ public class Brick extends Shape {
         System.out.println("c = " + c);
     }
 
-    @Override
-    public double getVolume() {
-        return a * b * c;
+    public double[] getDimensions() {
+        return new double[]{a, b, c};
     }
+
 }

@@ -7,10 +7,10 @@ public class Cube extends Brick {
     public Cube(double side) {
         super(side, side, side);
         this.side = side;
+        setVolume(side * side * side);
     }
 
-    @Override
-    public double getVolume() {
-        return side * side * side;
+    public double getSide() {
+        return side;
     }
 }

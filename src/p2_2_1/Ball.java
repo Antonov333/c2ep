@@ -7,8 +7,4 @@ public class Ball extends SolidOfRevolution {
         setVolume((4.0 * PI * r * r * r) / 3.0);
     }
 
-    @Override
-    public double getVolume() {
-        return super.getVolume();
-    }
 }
