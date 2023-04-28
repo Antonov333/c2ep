@@ -29,4 +29,15 @@ public class Box implements ShapeInterface {
         }
     }
 
+    public void add(Ball ball) {
+        if (filledVolume + ball.getVolume() <= getVolume()) {
+            filledVolume = filledVolume + ball.getVolume();
+            System.out.println("added figure of " + ball.getVolume());
+            System.out.println("At the moment loaded " + filledVolume + " of " + getVolume() + " total volume");
+        } else {
+            System.out.println("no more available space in the box: " + (double) (getVolume() - filledVolume) + " available while "
+                    + ball.getVolume() + " required");
+        }
+    }
+
 }
